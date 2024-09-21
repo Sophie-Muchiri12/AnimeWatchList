@@ -38,7 +38,7 @@ View your watchlist and progress.
 
 ### Prerequisites
 
-Python 3.x: Required to run the project.
+Python : Required to run the project.
 
 SQLAlchemy: The ORM used for database interactions.
 
