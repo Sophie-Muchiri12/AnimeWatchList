@@ -19,7 +19,7 @@ def main():
     # Seed the database
     
     try:
-        seed_data(session)  # Call the function to seed data to seed the data with initial data
+        seed_data(session)  # Call the function to  seed the data with initial data
         print("Database seeded with initial data.")
     except Exception as e:
         session.rollback() #exception handling if any error occurs while seeding  the session rollsback any changes made

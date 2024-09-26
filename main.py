@@ -3,17 +3,17 @@ from models.user import User
 from models.watchlist import WatchList
 from models.base import Base, session, engine
 
-# Base.metadata.drop_all(engine)  # Just in case I change anything or mess up my database
+#Base.metadata.drop_all(engine)  # Just in case I change anything or mess up my database
 
 # Current logged-in user
 current_user = None
 
 # Anime Functions
 
-def add_anime(title: str, genre: str, episodes: int, status: str):  # pass title, genre, episodes and status with default datatypes
+def add_anime(title: str, genre: str, episodes: int):  # pass title, genre, episodes and status with default datatypes
     session  # creates a new session
     try:
-        anime = Anime(title=title, genre=genre, episodes=episodes, status=status)  # creates an instance for an anime
+        anime = Anime(title=title, genre=genre, episodes=episodes)  # creates an instance for an anime
         session.add(anime)  # adds the anime to the session
         session.commit()  # closes the session to allow the next session to begin
         print('\t=========================================')
@@ -67,7 +67,7 @@ def view_anime(title: str):
             print(f"Title: {anime.title}")
             print(f"Genre: {anime.genre}")
             print(f"Episodes: {anime.episodes}")
-            print(f"Status: {anime.status}")
+         
         else:
             print('\t=========================================')
             print(f"Anime titled '{title}' not found.")
@@ -234,6 +234,7 @@ def delete_user(email: str):
 
 def main_menu():
     while True:
+        print()
         print("\nMain Menu")
         print("1. Add User")
         print("2. Login as User")

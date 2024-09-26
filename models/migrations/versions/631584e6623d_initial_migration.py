@@ -72,7 +72,7 @@ def upgrade() -> None:
         sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
         sa.ForeignKeyConstraint(['anime_id'], ['animes.id'], ),
         sa.PrimaryKeyConstraint('id'),
-        sa.Column('watched_episodes', sa.Integer(),nullable=False)
+        sa.Column('watched_episodes', sa.Integer(),nullable=False),
         sa.Column('status', sa.String(),nullable=False)
 
     )

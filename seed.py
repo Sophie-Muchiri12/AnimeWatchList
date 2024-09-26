@@ -17,8 +17,8 @@ def seed_data(session):
         session.commit()  # Commit to generate IDs for users
 
         # Create  animes
-        anime1 = Anime(title="Attack on Titan", genre="Action", episodes=25, status="Completed")
-        anime2 = Anime(title="My Hero Academia", genre="Action", episodes=88, status="Currently Watching")
+        anime1 = Anime(title="Attack on Titan", genre="Action", episodes=25)
+        anime2 = Anime(title="My Hero Academia", genre="Action", episodes=88)
 
         # Add animes to the session
         session.add_all([anime1, anime2])

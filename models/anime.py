@@ -8,7 +8,7 @@ class Anime(Base):
     title = Column(String, index=True)
     genre = Column(String)
     episodes = Column(Integer)
-    status = Column(String)
+    
 
     def __repr__(self):
-        return f"<Anime(title='{self.title}', genre='{self.genre}', episodes={self.episodes}, status='{self.status}')>"
+        return f"<Anime(title='{self.title}', genre='{self.genre}', episodes={self.episodes}')>"
